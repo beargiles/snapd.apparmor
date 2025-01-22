@@ -1,0 +1,571 @@
+● chaos.coyotesong.net
+    State: degraded
+    Units: 926 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Sun 2025-01-19 21:01:17 MST; 2 days ago
+  systemd: 256.5-2ubuntu3.1
+  Tainted: unmerged-bin
+   CGroup: /
+           ├─init.scope
+           │ └─1 /sbin/init splash
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─2550 /usr/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─2353 /usr/sbin/NetworkManager --no-daemon
+           │ ├─accounts-daemon.service
+           │ │ └─2245 /usr/libexec/accounts-daemon
+           │ ├─atop.service
+           │ │ └─598305 /usr/bin/atop -w /var/log/atop/atop_20250122 600
+           │ ├─atopacct.service
+           │ │ └─2388 /usr/sbin/atopacctd
+           │ ├─auditd.service
+           │ │ └─612452 /usr/sbin/auditd
+           │ ├─avahi-daemon.service
+           │ │ ├─2204 "avahi-daemon: running [chaos.local]"
+           │ │ └─2343 "avahi-daemon: chroot helper"
+           │ ├─bluetooth.service
+           │ │ └─2205 /usr/libexec/bluetooth/bluetoothd
+           │ ├─clamav-daemon.service
+           │ │ └─2297 /usr/sbin/clamd --foreground=true
+           │ ├─clamav-freshclam.service
+           │ │ └─3064 /usr/bin/freshclam -d --foreground=true
+           │ ├─colord.service
+           │ │ └─2895 /usr/libexec/colord
+           │ ├─containerd.service
+           │ │ ├─2862 /usr/bin/containerd
+           │ │ ├─4086 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 71f491b25bd98125bae52d96aa5ba72cf1d637ac52c61179c48dcc007230f400 -address /run/containerd/containerd.sock
+           │ │ └─4087 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 78981767e052b607af2e20b4e9730964614def973d70c3e41b4f53044be190ba -address /run/containerd/containerd.sock
+           │ ├─cron.service
+           │ │ └─3300 /usr/sbin/cron -f -P
+           │ ├─cups-browsed.service
+           │ │ └─604486 /usr/sbin/cups-browsed
+           │ ├─cups.service
+           │ │ ├─604479 /usr/sbin/cupsd -l
+           │ │ ├─604912 /usr/lib/cups/notifier/dbus dbus://
+           │ │ └─604913 /usr/lib/cups/notifier/dbus dbus://
+           │ ├─dbus.service
+           │ │ └─2208 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─docker-71f491b25bd98125bae52d96aa5ba72cf1d637ac52c61179c48dcc007230f400.scope
+           │ │ ├─4126 /package/admin/s6/command/s6-svscan -d4 -- /run/service
+           │ │ ├─4223 s6-supervise s6-linux-init-shutdownd
+           │ │ ├─4227 /package/admin/s6-linux-init/command/s6-linux-init-shutdownd -c /run/s6/basedir -g 3000 -C -B
+           │ │ ├─4243 s6-supervise lighttpd
+           │ │ ├─4245 s6-supervise lighttpd-error-log
+           │ │ ├─4247 s6-supervise cron
+           │ │ ├─4248 s6-supervise s6rc-fdholder
+           │ │ ├─4249 s6-supervise lighttpd-access-log
+           │ │ ├─4250 s6-supervise s6rc-oneshot-runner
+           │ │ ├─4251 s6-supervise pihole-FTL
+           │ │ ├─4265 /package/admin/s6/command/s6-ipcserverd -1 -- /package/admin/s6/command/s6-ipcserver-access -v0 -E -l0 -i data/rules -- /package/admin/s6/command/s6-sudod -t 30000 -- /package/admin/s6-rc/command/s6-rc-oneshot-run -l ../.. --
+           │ │ ├─4302 bash ./run
+           │ │ ├─4313 /usr/sbin/cron -f
+           │ │ ├─4875 bash ./run
+           │ │ ├─4879 bash ./run
+           │ │ ├─4905 lighttpd -D -f /etc/lighttpd/lighttpd.conf
+           │ │ ├─4951 /bin/bash -c "/usr/bin/pihole-FTL no-daemon >/dev/null 2>&1"
+           │ │ ├─4955 /usr/bin/pihole-FTL no-daemon
+           │ │ ├─5058 /usr/bin/php-cgi
+           │ │ ├─5110 /usr/bin/php-cgi
+           │ │ ├─5112 /usr/bin/php-cgi
+           │ │ ├─5114 /usr/bin/php-cgi
+           │ │ └─5116 /usr/bin/php-cgi
+           │ ├─docker-78981767e052b607af2e20b4e9730964614def973d70c3e41b4f53044be190ba.scope
+           │ │ ├─4134 /package/admin/s6/command/s6-svscan -d4 -- /run/service
+           │ │ ├─4222 s6-supervise s6-linux-init-shutdownd
+           │ │ ├─4226 /package/admin/s6-linux-init/command/s6-linux-init-shutdownd -c /run/s6/basedir -g 3000 -C -B
+           │ │ ├─4238 s6-supervise lighttpd
+           │ │ ├─4239 s6-supervise lighttpd-error-log
+           │ │ ├─4240 s6-supervise cron
+           │ │ ├─4241 s6-supervise s6rc-fdholder
+           │ │ ├─4242 s6-supervise lighttpd-access-log
+           │ │ ├─4244 s6-supervise s6rc-oneshot-runner
+           │ │ ├─4246 s6-supervise pihole-FTL
+           │ │ ├─4266 /package/admin/s6/command/s6-ipcserverd -1 -- /package/admin/s6/command/s6-ipcserver-access -v0 -E -l0 -i data/rules -- /package/admin/s6/command/s6-sudod -t 30000 -- /package/admin/s6-rc/command/s6-rc-oneshot-run -l ../.. --
+           │ │ ├─4301 bash ./run
+           │ │ ├─4314 /usr/sbin/cron -f
+           │ │ ├─4850 bash ./run
+           │ │ ├─4856 bash ./run
+           │ │ ├─4900 lighttpd -D -f /etc/lighttpd/lighttpd.conf
+           │ │ ├─4945 /bin/bash -c "/usr/bin/pihole-FTL no-daemon >/dev/null 2>&1"
+           │ │ ├─4946 /usr/bin/pihole-FTL no-daemon
+           │ │ ├─5066 /usr/bin/php-cgi
+           │ │ ├─5109 /usr/bin/php-cgi
+           │ │ ├─5111 /usr/bin/php-cgi
+           │ │ ├─5113 /usr/bin/php-cgi
+           │ │ └─5115 /usr/bin/php-cgi
+           │ ├─docker.service
+           │ │ ├─3070 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+           │ │ ├─3930 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.88.54 -host-port 53 -container-ip 172.19.0.2 -container-port 53
+           │ │ ├─3941 /usr/bin/docker-proxy -proto udp -host-ip 192.168.88.54 -host-port 53 -container-ip 172.19.0.2 -container-port 53
+           │ │ ├─3948 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.2.54 -host-port 53 -container-ip 172.19.0.3 -container-port 53
+           │ │ ├─3949 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.88.54 -host-port 80 -container-ip 172.19.0.2 -container-port 80
+           │ │ ├─3962 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.88.54 -host-port 443 -container-ip 172.19.0.2 -container-port 443
+           │ │ ├─3964 /usr/bin/docker-proxy -proto udp -host-ip 192.168.2.54 -host-port 53 -container-ip 172.19.0.3 -container-port 53
+           │ │ ├─3976 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.88.54 -host-port 4711 -container-ip 172.19.0.2 -container-port 4711
+           │ │ ├─3977 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.2.54 -host-port 80 -container-ip 172.19.0.3 -container-port 80
+           │ │ ├─3994 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.2.54 -host-port 443 -container-ip 172.19.0.3 -container-port 443
+           │ │ └─4000 /usr/bin/docker-proxy -proto tcp -host-ip 192.168.2.54 -host-port 4711 -container-ip 172.19.0.3 -container-port 4711
+           │ ├─fwupd.service
+           │ │ └─26449 /usr/libexec/fwupd/fwupd
+           │ ├─gdm.service
+           │ │ └─3398 /usr/sbin/gdm3
+           │ ├─glances.service
+           │ │ └─2842 /usr/bin/python3 /usr/bin/glances -s -B 127.0.0.1
+           │ ├─input-remapper-daemon.service
+           │ │ ├─2360 /usr/bin/python3 /usr/bin/input-remapper-service
+           │ │ └─2641 /usr/bin/python3 /usr/bin/input-remapper-service
+           │ ├─iperf3.service
+           │ │ └─2843 /usr/bin/iperf3 --server --interval 0
+           │ ├─networkd-dispatcher.service
+           │ │ └─2224 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+           │ ├─ntpsec.service
+           │ │ └─2875 /usr/sbin/ntpd -p /run/ntpd.pid -c /etc/ntpsec/ntp.conf -g -N -u ntpsec:ntpsec
+           │ ├─polkit.service
+           │ │ └─2232 /usr/lib/polkit-1/polkitd --no-debug
+           │ ├─power-profiles-daemon.service
+           │ │ └─5278 /usr/libexec/power-profiles-daemon
+           │ ├─ptpd.service
+           │ │ └─3330 /usr/sbin/ptpd -c /etc/ptpd.conf --log-file /var/log/ptpd2.log
+           │ ├─redis-server.service
+           │ │ └─2857 "/usr/bin/redis-server 127.0.0.1:6379"
+           │ ├─rpcbind.service
+           │ │ └─1556 /usr/sbin/rpcbind -f -w
+           │ ├─rsyslog.service
+           │ │ └─2340 /usr/sbin/rsyslogd -n -iNONE
+           │ ├─rtkit-daemon.service
+           │ │ └─3509 /usr/libexec/rtkit-daemon
+           │ ├─smartmontools.service
+           │ │ └─2240 /usr/sbin/smartd -n
+           │ ├─snapd.service
+           │ │ └─632832 /usr/lib/snapd/snapd
+           │ ├─ssh.service
+           │ │ └─24858 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+           │ ├─switcheroo-control.service
+           │ │ └─2246 /usr/libexec/switcheroo-control
+           │ ├─system-postfix.slice
+           │ │ └─postfix@-.service
+           │ │   ├─   3405 /usr/lib/postfix/sbin/master -w
+           │ │   ├─   3407 qmgr -l -t unix -u
+           │ │   └─1003889 pickup -l -t unix -u -c
+           │ ├─system-postgresql.slice
+           │ │ ├─postgresql@15-main.service
+           │ │ │ ├─2921 /usr/lib/postgresql/15/bin/postgres -D /var/lib/postgresql/15/main -c config_file=/etc/postgresql/15/main/postgresql.conf
+           │ │ │ ├─2949 "postgres: 15/main: checkpointer "
+           │ │ │ ├─2950 "postgres: 15/main: background writer "
+           │ │ │ ├─2962 "postgres: 15/main: walwriter "
+           │ │ │ ├─2963 "postgres: 15/main: autovacuum launcher "
+           │ │ │ └─2964 "postgres: 15/main: logical replication launcher "
+           │ │ └─postgresql@16-main.service
+           │ │   ├─2924 /usr/lib/postgresql/16/bin/postgres -D /var/lib/postgresql/16/main -c config_file=/etc/postgresql/16/main/postgresql.conf
+           │ │   ├─2957 "postgres: 16/main: checkpointer "
+           │ │   ├─2958 "postgres: 16/main: background writer "
+           │ │   ├─2968 "postgres: 16/main: walwriter "
+           │ │   ├─2969 "postgres: 16/main: autovacuum launcher "
+           │ │   └─2970 "postgres: 16/main: logical replication launcher "
+           │ ├─systemd-journald.service
+           │ │ └─839 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─2250 /usr/lib/systemd/systemd-logind
+           │ ├─systemd-oomd.service
+           │ │ └─1562 /usr/lib/systemd/systemd-oomd
+           │ ├─systemd-resolved.service
+           │ │ └─1563 /usr/lib/systemd/systemd-resolved
+           │ ├─systemd-udevd.service
+           │ │ └─udev
+           │ │   └─903 /usr/lib/systemd/systemd-udevd
+           │ ├─thermald.service
+           │ │ └─2252 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+           │ ├─ubuntu-advantage-desktop-daemon.service
+           │ │ └─10509 /usr/libexec/ubuntu-advantage-desktop-daemon
+           │ ├─udisks2.service
+           │ │ └─2253 /usr/libexec/udisks2/udisksd
+           │ ├─unattended-upgrades.service
+           │ │ └─2859 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+           │ ├─upower.service
+           │ │ └─4450 /usr/libexec/upowerd
+           │ ├─wpa_supplicant.service
+           │ │ └─2370 /usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+           │ └─zabbix-agent2.service
+           │   └─5406 /usr/sbin/zabbix_agent2 -c /etc/zabbix/zabbix_agent2.conf
+           └─user.slice
+             ├─user-0.slice
+             │ ├─session-662.scope
+             │ │ ├─609834 "sshd: root@pts/10"
+             │ │ └─609952 -bash
+             │ ├─session-8.scope
+             │ │ ├─7577 /bin/login -p --
+             │ │ └─7751 -bash
+             │ └─user@0.service
+             │   ├─app.slice
+             │   │ └─yubikey-agent.service
+             │   │   └─7752 yubikey-agent -l //run/user/0/yubikey-agent/yubikey-agent.sock
+             │   ├─init.scope
+             │   │ ├─7716 /usr/lib/systemd/systemd --user
+             │   │ └─7725 "(sd-pam)"
+             │   └─session.slice
+             │     ├─dbus.service
+             │     │ └─7818 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+             │     ├─xdg-document-portal.service
+             │     │ ├─7829 /usr/libexec/xdg-document-portal
+             │     │ └─7840 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/0/doc
+             │     └─xdg-permission-store.service
+             │       └─7833 /usr/libexec/xdg-permission-store
+             └─user-1000.slice
+               ├─session-14.scope
+               │ ├─9574 "gdm-session-worker [pam/gdm-password]"
+               │ ├─9605 /usr/libexec/gdm-wayland-session "env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu"
+               │ └─9617 /usr/libexec/gnome-session-binary --session=ubuntu
+               ├─session-4.scope
+               │ ├─6210 /bin/login -p --
+               │ └─6473 -bash
+               ├─session-572.scope
+               │ ├─511041 "sshd: bgiles [priv]"
+               │ ├─511156 "sshd: bgiles@pts/6"
+               │ └─511159 -bash
+               └─user@1000.service
+                 ├─app.slice
+                 │ ├─app-gnome-1password-573802.scope
+                 │ │ ├─573802 /opt/1Password/1password
+                 │ │ ├─573807 "/opt/1Password/1password --type=zygote --no-zygote-sandbox"
+                 │ │ ├─573808 "/opt/1Password/1password --type=zygote"
+                 │ │ ├─573811 "/opt/1Password/1password --type=zygote"
+                 │ │ ├─573851 "/opt/1Password/1password --type=gpu-process --enable-crash-reporter=6ab9c7b8-0d48-4137-9efe-cdbaa13d42ea,no_channel --user-data-dir=/home/bgiles/.config/1Password --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=3,i,3463211405106363444,18432497480773125499,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"
+                 │ │ ├─573856 "/opt/1Password/1password --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=6ab9c7b8-0d48-4137-9efe-cdbaa13d42ea,no_channel --user-data-dir=/home/bgiles/.config/1Password --standard-schemes=resource,file-icon --enable-sandbox --bypasscsp-schemes=resource,file-icon --fetch-schemes=resource,file-icon --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3463211405106363444,18432497480773125499,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"
+                 │ │ ├─574649 /opt/1Password/1Password-Crash-Handler
+                 │ │ └─574715 "/opt/1Password/1password --type=renderer --enable-crash-reporter=6ab9c7b8-0d48-4137-9efe-cdbaa13d42ea,no_channel --user-data-dir=/home/bgiles/.config/1Password --standard-schemes=resource,file-icon --enable-sandbox --bypasscsp-schemes=resource,file-icon --fetch-schemes=resource,file-icon --app-path=/opt/1Password/resources/app.asar --enable-sandbox --disable-blink-features=Auxclick --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154503089467 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3463211405106363444,18432497480773125499,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"
+                 │ ├─app-gnome-aa\x2dnotify-10009.scope
+                 │ │ └─10295 /usr/bin/python3 /usr/bin/aa-notify -p -s 1 -w 60
+                 │ ├─app-gnome-at\x2dspi\x2ddbus\x2dbus-9761.scope
+                 │ │ └─9761 /usr/libexec/at-spi-bus-launcher --launch-immediately
+                 │ ├─app-gnome-brave\x2dbrowser-995675.scope
+                 │ │ └─995675 /bin/bash /usr/bin/brave-browser-stable
+                 │ ├─app-gnome-google\x2dchrome-40402.scope
+                 │ │ ├─  40402 /opt/google/chrome/chrome
+                 │ │ ├─  40410 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler "--database=/home/bgiles/.config/google-chrome/Crash Reports" --url=https://clients2.google.com/cr/report --annotation=channel= "--annotation=lsb-release=Ubuntu 24.10" --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=132.0.6834.83 --initial-client-fd=5 --shared-client-connection
+                 │ │ ├─  40412 /opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler "--database=/home/bgiles/.config/google-chrome/Crash Reports" --url=https://clients2.google.com/cr/report --annotation=channel= "--annotation=lsb-release=Ubuntu 24.10" --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=132.0.6834.83 --initial-client-fd=4 --shared-client-connection
+                 │ │ ├─  40418 "/opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                 │ │ ├─  40419 "/opt/google/chrome/chrome --type=zygote --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                 │ │ ├─  40422 "/opt/google/chrome/chrome --type=zygote --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                 │ │ ├─  40449 "/opt/google/chrome/chrome --type=gpu-process --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40452 "/opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40474 "/opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40518 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=9 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=3998947175 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40524 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=10 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=3998950465 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40537 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=3998954344 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40622 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=3999185411 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40651 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=19 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=3999308671 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40722 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=20 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4001865942 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40817 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=21 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4002099616 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  40960 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=26 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4008426916 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  41834 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=36 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4173565596 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  41850 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=37 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4173954819 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  42052 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=40 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4201847197 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  42810 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=49 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=4330945616 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  46948 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=66 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=5221920687 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  47026 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=70 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=5226168876 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  47035 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=71 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=5226408562 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─  47112 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=72 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=5240110789 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 169410 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=133 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=64696077525 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 169470 "/opt/google/chrome/chrome --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 179990 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=147 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=65843144576 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 218639 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=162 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=68315673891 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 219381 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=170 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=68395719933 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 219537 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=174 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=68403099528 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 567632 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=983 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154034127108 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 567732 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=986 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154040218112 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 567987 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=987 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154062538710 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568044 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=988 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154065345950 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568097 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=989 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154066478588 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568304 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=990 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154077740405 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568436 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=991 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154083176359 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568553 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=992 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154090588117 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568660 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=993 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154095404049 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 568782 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=994 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154099658577 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569238 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=996 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154133842459 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569442 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=999 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154145036712 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569525 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1002 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154150188869 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569614 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1005 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154155899213 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569709 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1008 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154158977560 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569851 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1010 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154163681403 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 569980 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1013 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154168960976 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 570071 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1015 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154172178989 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 570261 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1017 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154182525810 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 570441 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1020 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154193527074 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 570514 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1023 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154197872454 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 570890 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1025 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154227622769 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571033 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1028 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154235997551 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571113 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1031 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154240329740 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571207 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1033 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154245359252 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571413 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1035 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154262381931 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571521 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1038 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154270704380 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571581 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1041 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154272752682 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571707 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1043 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154279081268 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571934 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1046 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154284316515 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 571963 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1048 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154285786374 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 572133 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1051 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154293500911 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 572243 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1054 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154303282461 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 572924 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1062 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154366578181 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 573526 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1068 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154445839381 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 573538 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1069 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154446954603 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 574979 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1070 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154542743043 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 575013 /opt/1Password/1Password-BrowserSupport chrome-extension://aeblfdkhhhdcdjpifhhbdiojplfjncoa/
+                 │ │ ├─ 575347 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1072 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154597938744 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 576456 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1078 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154765358221 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 576466 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1079 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154765779608 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 576480 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1080 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154766118160 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 576570 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1082 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154781971357 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 576614 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1083 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154788632315 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 577123 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1087 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=154860780266 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 610430 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1108 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=161605827305 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 610528 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1112 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=161618513869 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 610537 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1113 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=161618935601 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 610625 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1114 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=161626277692 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 621347 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1124 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163170673683 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 621397 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1125 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163178749897 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 623007 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1128 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163339479844 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 623111 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1130 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163359061604 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 623207 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1132 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163365185111 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 623218 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1133 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163365415220 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 623273 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1135 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=163371454417 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 633920 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1144 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=164038100386 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 635540 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1155 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=164290844890 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 635695 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1158 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=164309847991 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 654415 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1170 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=167668267411 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 654469 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1172 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=167676351231 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 654553 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1173 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=167693357168 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 654631 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1174 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=167700617792 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 657883 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1181 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=168119154138 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 658874 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1184 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=168270715126 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 663557 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1195 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=168957253248 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 663592 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1196 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=168961939535 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 665750 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1201 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=169290317324 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 665778 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=1202 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=169292988717 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 998440 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2108 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240078477376 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 998706 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2111 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240108839505 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 998837 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2114 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240117736358 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 998907 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2117 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240123072912 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 998999 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2119 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240133104525 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 999042 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2122 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240137284086 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─ 999326 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2124 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=240157995716 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─1015365 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --extension-process --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2168 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=242881025820 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ ├─1016705 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2171 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=243088605715 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ │ └─1016763 "/opt/google/chrome/chrome --type=renderer --string-annotations --crashpad-handler-pid=40410 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=2173 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=243097890090 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14247974407578728614,11444912082101677802,262144 --disable-features=EyeDropper --variations-seed-version=20250117-130131.443000"
+                 │ ├─app-gnome-indicator\x2dmessages-10035.scope
+                 │ │ └─10035 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+                 │ ├─app-gnome-org.gnome.Evolution\x2dalarm\x2dnotify-10125.scope
+                 │ │ └─10125 /usr/libexec/evolution-data-server/evolution-alarm-notify
+                 │ ├─app-gnome-org.gnome.SettingsDaemon.DiskUtilityNotify-10093.scope
+                 │ │ └─10093 /usr/libexec/gsd-disk-utility-notify
+                 │ ├─app-gnome-org.gnome.Software-10129.scope
+                 │ │ └─10129 /usr/bin/gnome-software --gapplication-service
+                 │ ├─app-gnome-org.kde.kdeconnect.daemon-10136.scope
+                 │ │ └─10136 /usr/bin/kdeconnectd
+                 │ ├─app-gnome-smart\x2dnotifier-10107.scope
+                 │ │ └─10107 /usr/bin/python3 /usr/bin/smart-notifier
+                 │ ├─app-gnome-update\x2dnotifier-11520.scope
+                 │ │ └─11520 /usr/bin/update-notifier
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-1010214.scope
+                 │ │ ├─1010214 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─1010217 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-11362.scope
+                 │ │ ├─11362 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─11365 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-11594.scope
+                 │ │ ├─11594 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─11597 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-24228.scope
+                 │ │ ├─24228 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─24231 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-24647.scope
+                 │ │ ├─24647 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─24650 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-24664.scope
+                 │ │ ├─24664 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─24666 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-619452.scope
+                 │ │ ├─619452 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─619455 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-678421.scope
+                 │ │ ├─678421 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─678424 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome-x\x2dterminal\x2demulator-689473.scope
+                 │ │ ├─689473 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+                 │ │ └─689476 /usr/bin/gnome-terminal.real --wait
+                 │ ├─app-gnome\x2dsession\x2dmanager.slice
+                 │ │ └─gnome-session-manager@ubuntu.service
+                 │ │   ├─9735 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+                 │ │   ├─9776 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+                 │ │   └─9859 /usr/libexec/at-spi2-registryd --use-gnome-session
+                 │ ├─app-org.gnome.Terminal.slice
+                 │ │ ├─gnome-terminal-server.service
+                 │ │ │ └─11379 /usr/libexec/gnome-terminal-server
+                 │ │ ├─vte-spawn-024ca4a1-ebe5-4fc0-a7da-c05b11cb0bd3.scope
+                 │ │ │ ├─575611 bash
+                 │ │ │ └─609833 ssh -Y root@chaos
+                 │ │ ├─vte-spawn-12a4aca5-6fcb-4935-8369-3d7be409ca2c.scope
+                 │ │ │ ├─639247 bash
+                 │ │ │ └─639260 ssh eris
+                 │ │ ├─vte-spawn-14d46186-86e0-4abf-b6ad-46dd6723d6ae.scope
+                 │ │ │ └─619461 bash
+                 │ │ ├─vte-spawn-2251b9c3-5fb5-4d43-862d-17850b00e262.scope
+                 │ │ │ └─620731 bash
+                 │ │ ├─vte-spawn-53da238b-8ef8-4f73-808a-e9764025e783.scope
+                 │ │ │ └─213527 bash
+                 │ │ ├─vte-spawn-65f3d574-dbec-4b76-b5a9-5f8980ce7631.scope
+                 │ │ │ └─11388 bash
+                 │ │ ├─vte-spawn-687dbb43-75d8-4305-980a-c424fe2facc0.scope
+                 │ │ │ └─24672 bash
+                 │ │ ├─vte-spawn-6ecc9f78-5e00-47a3-9734-296d4ef1c8a7.scope
+                 │ │ │ ├─ 24237 bash
+                 │ │ │ └─213440 tail -F syslog
+                 │ │ ├─vte-spawn-72f1d53c-ae32-4bf4-bde8-8e7fabaa97ab.scope
+                 │ │ │ ├─585041 bash
+                 │ │ │ └─615911 vi usr.bin.snap
+                 │ │ ├─vte-spawn-7f2de1da-8a1d-4d25-b6f0-5a2960bf963e.scope
+                 │ │ │ ├─1012496 bash
+                 │ │ │ └─1018925 systemctl status
+                 │ │ ├─vte-spawn-910bdbc2-6539-431e-9b63-1992bc1215da.scope
+                 │ │ │ └─701454 bash
+                 │ │ ├─vte-spawn-94a81489-72bd-4d23-a193-eb31013d49ff.scope
+                 │ │ │ ├─ 11604 bash
+                 │ │ │ ├─213209 /home/bgiles/src/missioncenter.io/mission-center/build-meson-debug/src/missioncenter
+                 │ │ │ └─213218 missioncenter-gatherer
+                 │ │ ├─vte-spawn-972465d9-867e-490b-ac8e-00bba3d89a65.scope
+                 │ │ │ └─572529 bash
+                 │ │ ├─vte-spawn-9c3390c9-5240-4da9-b11a-69d3c313a57e.scope
+                 │ │ │ ├─1010223 bash
+                 │ │ │ └─1010983 ssh eris
+                 │ │ ├─vte-spawn-b8ba8535-36e0-4cf1-ba1b-733e11eb199f.scope
+                 │ │ │ └─616036 bash
+                 │ │ ├─vte-spawn-b95f86fb-4997-44dd-8512-1e019f93d033.scope
+                 │ │ │ ├─689482 bash
+                 │ │ │ └─689569 bc
+                 │ │ ├─vte-spawn-d6300298-d7c8-4ac0-aa68-0ed50c11079e.scope
+                 │ │ │ ├─24656 bash
+                 │ │ │ └─24713 ssh eris
+                 │ │ └─vte-spawn-f946297c-9e2b-480a-af4b-764248b40647.scope
+                 │ │   └─678432 bash
+                 │ ├─dconf.service
+                 │ │ └─9930 /usr/libexec/dconf-service
+                 │ ├─evolution-addressbook-factory.service
+                 │ │ └─10242 /usr/libexec/evolution-addressbook-factory
+                 │ ├─evolution-calendar-factory.service
+                 │ │ └─10204 /usr/libexec/evolution-calendar-factory
+                 │ ├─evolution-source-registry.service
+                 │ │ └─9928 /usr/libexec/evolution-source-registry
+                 │ ├─gcr-ssh-agent.service
+                 │ │ └─9699 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+                 │ ├─gnome-keyring-daemon.service
+                 │ │ ├─ 7143 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+                 │ │ └─24715 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+                 │ ├─gnome-session-monitor.service
+                 │ │ └─9700 /usr/libexec/gnome-session-ctl --monitor
+                 │ ├─gpg-agent.service
+                 │ │ └─666039 /usr/bin/gpg-agent --supervised
+                 │ ├─org.gnome.GPaste.service
+                 │ │ └─10421 /usr/libexec/gpaste/gpaste-daemon
+                 │ ├─xdg-desktop-portal-gnome.service
+                 │ │ └─10425 /usr/libexec/xdg-desktop-portal-gnome
+                 │ ├─xdg-desktop-portal-gtk.service
+                 │ │ └─10519 /usr/libexec/xdg-desktop-portal-gtk
+                 │ └─yubikey-agent.service
+                 │   └─6472 yubikey-agent -l //run/user/1000/yubikey-agent/yubikey-agent.sock
+                 ├─background.slice
+                 │ └─tracker-miner-fs-3.service
+                 │   └─10422 /usr/libexec/tracker-miner-fs-3
+                 ├─init.scope
+                 │ ├─6433 /usr/lib/systemd/systemd --user
+                 │ └─6437 "(sd-pam)"
+                 └─session.slice
+                   ├─dbus.service
+                   │ ├─ 6484 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+                   │ ├─ 9921 /usr/libexec/gnome-shell-calendar-server
+                   │ ├─ 9942 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+                   │ ├─10118 /usr/libexec/goa-daemon
+                   │ ├─10180 /usr/libexec/goa-identity-service
+                   │ ├─10258 /usr/libexec/ibus-portal
+                   │ └─10403 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+                   ├─filter-chain.service
+                   │ └─6461 /usr/bin/pipewire -c filter-chain.conf
+                   ├─gvfs-daemon.service
+                   │ ├─ 9721 /usr/libexec/gvfsd
+                   │ └─10653 /usr/libexec/gvfsd-trash --spawner :1.33 /org/gtk/gvfs/exec_spaw/0
+                   ├─gvfs-metadata.service
+                   │ └─10613 /usr/libexec/gvfsd-metadata
+                   ├─gvfs-udisks2-volume-monitor.service
+                   │ └─10185 /usr/libexec/gvfs-udisks2-volume-monitor
+                   ├─org.freedesktop.IBus.session.GNOME.service
+                   │ ├─ 9961 /usr/bin/ibus-daemon --panel disable
+                   │ ├─10252 /usr/libexec/ibus-memconf
+                   │ ├─10253 /usr/libexec/ibus-extension-gtk3
+                   │ └─10319 /usr/libexec/ibus-engine-simple
+                   ├─org.gnome.SettingsDaemon.A11ySettings.service
+                   │ └─9962 /usr/libexec/gsd-a11y-settings
+                   ├─org.gnome.SettingsDaemon.Color.service
+                   │ └─9965 /usr/libexec/gsd-color
+                   ├─org.gnome.SettingsDaemon.Datetime.service
+                   │ └─9966 /usr/libexec/gsd-datetime
+                   ├─org.gnome.SettingsDaemon.Housekeeping.service
+                   │ └─9970 /usr/libexec/gsd-housekeeping
+                   ├─org.gnome.SettingsDaemon.Keyboard.service
+                   │ └─9974 /usr/libexec/gsd-keyboard
+                   ├─org.gnome.SettingsDaemon.MediaKeys.service
+                   │ └─9983 /usr/libexec/gsd-media-keys
+                   ├─org.gnome.SettingsDaemon.Power.service
+                   │ └─9988 /usr/libexec/gsd-power
+                   ├─org.gnome.SettingsDaemon.PrintNotifications.service
+                   │ ├─ 9992 /usr/libexec/gsd-print-notifications
+                   │ └─10178 /usr/libexec/gsd-printer
+                   ├─org.gnome.SettingsDaemon.Rfkill.service
+                   │ └─9994 /usr/libexec/gsd-rfkill
+                   ├─org.gnome.SettingsDaemon.ScreensaverProxy.service
+                   │ └─9996 /usr/libexec/gsd-screensaver-proxy
+                   ├─org.gnome.SettingsDaemon.Sharing.service
+                   │ └─9999 /usr/libexec/gsd-sharing
+                   ├─org.gnome.SettingsDaemon.Smartcard.service
+                   │ └─10005 /usr/libexec/gsd-smartcard
+                   ├─org.gnome.SettingsDaemon.Sound.service
+                   │ └─10010 /usr/libexec/gsd-sound
+                   ├─org.gnome.SettingsDaemon.Wacom.service
+                   │ └─10026 /usr/libexec/gsd-wacom
+                   ├─org.gnome.SettingsDaemon.XSettings.service
+                   │ ├─10507 /usr/libexec/gsd-xsettings
+                   │ └─10553 /usr/libexec/ibus-x11
+                   ├─org.gnome.Shell@wayland.service
+                   │ ├─  9763 /usr/bin/gnome-shell
+                   │ ├─ 10441 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.B4Y8Z2 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients
+                   │ ├─ 10559 /usr/libexec/mutter-x11-frames
+                   │ ├─ 40407 cat
+                   │ ├─ 40408 cat
+                   │ ├─995681 cat
+                   │ ├─995682 cat
+                   │ ├─995683 /opt/brave.com/brave/brave
+                   │ ├─995685 /opt/brave.com/brave/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler "--database=/home/bgiles/.config/BraveSoftware/Brave-Browser/Crash Reports" --url=https://cr.brave.com "--annotation=lsb-release=Ubuntu 24.10" --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=132.1.74.48 --initial-client-fd=5 --shared-client-connection
+                   │ ├─995687 /opt/brave.com/brave/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler "--database=/home/bgiles/.config/BraveSoftware/Brave-Browser/Crash Reports" --url=https://cr.brave.com "--annotation=lsb-release=Ubuntu 24.10" --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=132.1.74.48 --initial-client-fd=4 --shared-client-connection
+                   │ ├─995693 "/opt/brave.com/brave/brave --type=zygote --no-zygote-sandbox --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                   │ ├─995694 "/opt/brave.com/brave/brave --type=zygote --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                   │ ├─995697 "/opt/brave.com/brave/brave --type=zygote --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable"
+                   │ ├─995724 "/opt/brave.com/brave/brave --type=gpu-process --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995725 "/opt/brave.com/brave/brave --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995737 "/opt/brave.com/brave/brave --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995767 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239755333242 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995768 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239755335229 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995893 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239760935634 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995955 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=20 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239763348801 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ ├─995956 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=19 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239763357930 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   │ └─996675 "/opt/brave.com/brave/brave --type=renderer --string-annotations --crashpad-handler-pid=995685 --enable-crash-reporter=, --enable-distillability-service --origin-trial-public-key=bYUKPJoPnCxeNvu72j4EmPuK7tr1PAC7SHh8ld9Mw3E=,fMS4mpO6buLQ/QMd+zJmxzty/VQ6B1EUZqoCU04zoRU= --change-stack-guard-on-fork=enable --brave_session_token=10406331216924065958 --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=27 --time-ticks-at-unix-epoch=-1737344861713627 --launch-time-ticks=239853081402 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1089430644175735170,11353119408611945218,262144 --disable-features=EyeDropper --variations-seed-version=main@daf6d93489f2bc0f91a87af4d587d81c595652fd"
+                   ├─pipewire-pulse.service
+                   │ └─6466 /usr/bin/pipewire-pulse
+                   ├─pipewire.service
+                   │ └─6460 /usr/bin/pipewire
+                   ├─wireplumber.service
+                   │ └─6465 /usr/bin/wireplumber
+                   ├─xdg-desktop-portal.service
+                   │ └─10219 /usr/libexec/xdg-desktop-portal
+                   ├─xdg-document-portal.service
+                   │ ├─6547 /usr/libexec/xdg-document-portal
+                   │ └─6570 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+                   └─xdg-permission-store.service
+                     └─6560 /usr/libexec/xdg-permission-store
