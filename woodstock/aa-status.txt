@@ -1,0 +1,9 @@
+
+   /snap/snapd/21465/usr/lib/snapd/snap-confine
+   /snap/snapd/21465/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /snap/snapd/21759/usr/lib/snapd/snap-confine
+   /snap/snapd/21759/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /snap/snapd/23545/usr/lib/snapd/snap-confine
+   /snap/snapd/23545/usr/lib/snapd/snap-confine//mount-namespace-capture-helper
+   /usr/lib/snapd/snap-confine
+   /usr/lib/snapd/snap-confine//mount-namespace-capture-helper

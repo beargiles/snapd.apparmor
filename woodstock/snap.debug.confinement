@@ -1,0 +1,112 @@
+bgiles@woodstock:~$ snap debug confinement
+strict
+
+bgiles@woodstock:~$ snap debug sandbox-features
+`
+apparmor:             kernel:caps kernel:dbus kernel:domain kernel:domain:attach_conditions kernel:file kernel:io_uring kernel:ipc kernel:mount kernel:namespaces kernel:network kernel:network_v8 kernel:policy kernel:policy:permstable32:allow kernel:policy:permstable32:audit kernel:policy:permstable32:complain kernel:policy:permstable32:cond kernel:policy:permstable32:deny kernel:policy:permstable32:hide kernel:policy:permstable32:kill kernel:policy:permstable32:label kernel:policy:permstable32:prompt kernel:policy:permstable32:quiet kernel:policy:permstable32:subtree kernel:policy:permstable32:tag kernel:policy:permstable32:xindex kernel:policy:unconfined_restrictions kernel:policy:versions kernel:ptrace kernel:query kernel:query:label kernel:rlimit kernel:signal parser:allow-all parser:cap-audit-read parser:cap-bpf parser:include-if-exists parser:io-uring parser:mqueue parser:prompt parser:qipcrtr-socket parser:snapd-internal parser:unconfined parser:unsafe parser:userns parser:xdp policy:default support-level:full
+confinement-options:  classic devmode strict
+dbus:                 mediated-bus-access
+kmod:                 mediated-modprobe
+mount:                layouts mount-namespace per-snap-persistency per-snap-profiles per-snap-updates per-snap-user-profiles stale-base-invalidation
+seccomp:              bpf-actlog bpf-argument-filtering kernel:allow kernel:errno kernel:kill_process kernel:kill_thread kernel:log kernel:trace kernel:trap kernel:user_notif
+udev:                 device-cgroup-v2 device-filtering tagging
+
+bgiles@woodstock:~$ SNAPD_DEBUG=1 SNAP_CONFINE_DEBUG=1 snap run hello-world
+
+Hello World!
+2025/01/22 17:44:48.772692 logger.go:93: DEBUG: restarting into "/snap/snapd/current/usr/bin/snap"
+2025/01/22 17:44:48.796582 logger.go:99: DEBUG: -- snap startup {"stage":"start", "time":"1737596688.796563"}
+2025/01/22 17:44:48.797674 logger.go:99: DEBUG: checking internal apparmor_parser candidate at /snap/snapd/23545/usr/lib/snapd/apparmor_parser
+2025/01/22 17:44:48.807005 logger.go:99: DEBUG: executing snap-confine from /snap/snapd/23545/usr/lib/snapd/snap-confine
+2025/01/22 17:44:48.811208 logger.go:99: DEBUG: SELinux not enabled
+2025/01/22 17:44:48.816675 logger.go:99: DEBUG: creating transient scope snap.hello-world.hello-world
+2025/01/22 17:44:48.818202 logger.go:99: DEBUG: using session bus
+2025/01/22 17:44:48.822024 logger.go:99: DEBUG: create transient scope job: /org/freedesktop/systemd1/job/3939
+2025/01/22 17:44:48.846365 logger.go:99: DEBUG: job result is "done"
+2025/01/22 17:44:48.846479 logger.go:99: DEBUG: transient scope snap.hello-world.hello-world-bcb2ed42-e8a0-499c-a55c-e253854aac6b.scope created
+2025/01/22 17:44:48.847184 logger.go:99: DEBUG: waited 28.73016ms for tracking
+2025/01/22 17:44:48.847248 logger.go:99: DEBUG: -- snap startup {"stage":"snap to snap-confine", "time":"1737596688.847238"}
+DEBUG: -- snap startup {"stage":"snap-confine enter", "time":"1737596688.852723"}
+DEBUG: SNAP_MOUNT_DIR (probed): /snap
+DEBUG: umask reset, old umask was   02
+DEBUG: security tag: snap.hello-world.hello-world
+DEBUG: executable:   /usr/lib/snapd/snap-exec
+DEBUG: confinement:  non-classic
+DEBUG: base snap:    core
+DEBUG: ruid: 1000, euid: 0, suid: 0
+DEBUG: rgid: 1000, egid: 1000, sgid: 1000
+DEBUG: apparmor label on snap-confine is: /snap/snapd/23545/usr/lib/snapd/snap-confine
+DEBUG: apparmor mode is: enforce
+DEBUG: -- snap startup {"stage":"snap-confine mount namespace start", "time":"1737596688.853815"}
+DEBUG: creating lock directory /run/snapd/lock (if missing)
+DEBUG: set_effective_identity uid:0 (change: no), gid:0 (change: yes)
+DEBUG: opening lock directory /run/snapd/lock
+DEBUG: set_effective_identity uid:0 (change: no), gid:1000 (change: yes)
+DEBUG: opening lock file: /run/snapd/lock/.lock
+DEBUG: set_effective_identity uid:0 (change: no), gid:0 (change: yes)
+DEBUG: set_effective_identity uid:0 (change: no), gid:1000 (change: yes)
+DEBUG: sanity timeout initialized and set for 30 seconds
+DEBUG: acquiring exclusive lock (scope (global), uid 0)
+DEBUG: sanity timeout reset and disabled
+DEBUG: ensuring that snap mount directory is shared
+DEBUG: unsharing snap namespace directory
+DEBUG: set_effective_identity uid:0 (change: no), gid:0 (change: yes)
+DEBUG: set_effective_identity uid:0 (change: no), gid:1000 (change: yes)
+DEBUG: releasing lock 5
+DEBUG: opened snap-update-ns executable as file descriptor 5
+DEBUG: opened snap-discard-ns executable as file descriptor 6
+DEBUG: creating lock directory /run/snapd/lock (if missing)
+DEBUG: set_effective_identity uid:0 (change: no), gid:0 (change: yes)
+DEBUG: opening lock directory /run/snapd/lock
+DEBUG: set_effective_identity uid:0 (change: no), gid:1000 (change: yes)
+DEBUG: opening lock file: /run/snapd/lock/hello-world.lock
+DEBUG: set_effective_identity uid:0 (change: no), gid:0 (change: yes)
+DEBUG: set_effective_identity uid:0 (change: no), gid:1000 (change: yes)
+DEBUG: sanity timeout initialized and set for 30 seconds
+DEBUG: acquiring exclusive lock (scope hello-world, uid 0)
+DEBUG: sanity timeout reset and disabled
+DEBUG: initializing mount namespace: hello-world
+DEBUG: device cgroup not required due to base core
+DEBUG: setting up device cgroup, mode "optional"
+DEBUG: libudev has current tags support
+DEBUG: no devices tagged with snap_hello-world_hello-world, skipping device cgroup setup
+DEBUG: forked support process 19349
+DEBUG: changing apparmor hat to mount-namespace-capture-helper
+DEBUG: helper process waiting for command
+DEBUG: DEBUG: block device of snap core, revision 17200 is 7:21sanity timeout initialized and set for 30 seconds
+
+DEBUG: sanity timeout initialized and set for 30 seconds
+DEBUG: joining preserved mount namespace for inspection
+DEBUG: found base snap device 7:21 on /usr
+DEBUG: sanity timeout reset and disabled
+DEBUG: preserved mount is not stale, reusing
+DEBUG: joined preserved mount namespace hello-world
+DEBUG: joining preserved per-user mount namespace
+DEBUG: unsharing the mount namespace (per-user)
+DEBUG: sc_setup_user_mounts: hello-world
+DEBUG: NOT preserving per-user mount namespace
+DEBUG: releasing lock 7
+DEBUG: sending command 0 to helper process (pid: 19349)
+DEBUG: waiting for response from helper
+DEBUG: sanity timeout reset and disabled
+DEBUG: helper process received command 0
+DEBUG: helper process exiting
+DEBUG: waiting for the helper process to exit
+DEBUG: helper process exited normally
+DEBUG: resetting PATH to values in sync with core snap
+DEBUG: -- snap startup {"stage":"snap-confine mount namespace finish", "time":"1737596688.861701"}
+DEBUG: set_effective_identity uid:1000 (change: yes), gid:1000 (change: yes)
+DEBUG: creating user data directory: /home/bgiles/snap/hello-world/29
+DEBUG: requesting changing of apparmor profile on next exec to snap.hello-world.hello-world
+DEBUG: ruid: 1000, euid: 1000, suid: 0
+DEBUG: setting capabilities bounding set
+DEBUG: regaining SYS_ADMIN
+DEBUG: loading bpf program for security tag snap.hello-world.hello-world
+DEBUG: clearing SYS_ADMIN
+DEBUG: execv(/usr/lib/snapd/snap-exec, /usr/lib/snapd/snap-exec...)
+DEBUG:  argv[1] = hello-world.hello-world
+DEBUG: umask restored to   02
+DEBUG: working directory restored to /home/bgiles/src/beargiles/snapd.apparmor/woodstock
+DEBUG: -- snap startup {"stage":"snap-confine to snap-exec", "time":"1737596688.863692"}
+2025/01/22 17:44:48.870094 logger.go:93: DEBUG: -- snap startup {"stage":"snap-exec to app", "time":"1737596688.870085"}
+

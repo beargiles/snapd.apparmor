@@ -1,0 +1,20 @@
+Jan 22 17:15:33 woodstock.coyotesong.net systemd[1]: Starting apparmor.service - Load AppArmor profiles...
+░░ Subject: A start job for unit apparmor.service has begun execution
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit apparmor.service has begun execution.
+░░ 
+░░ The job identifier is 68.
+Jan 22 17:15:34 woodstock.coyotesong.net apparmor.systemd[1223]: Restarting AppArmor
+Jan 22 17:15:34 woodstock.coyotesong.net apparmor.systemd[1223]: Reloading AppArmor profiles
+Jan 22 17:15:34 woodstock.coyotesong.net apparmor.systemd[1348]: Warning: found usr.sbin.sssd in /etc/apparmor.d/force-complain, forcing complain mode
+Jan 22 17:15:34 woodstock.coyotesong.net apparmor.systemd[1348]: Warning from /etc/apparmor.d (/etc/apparmor.d/usr.sbin.sssd line 63): Caching disabled for: 'usr.sbin.sssd' due to force complain
+Jan 22 17:15:33 woodstock.coyotesong.net systemd[1]: Finished apparmor.service - Load AppArmor profiles.
+░░ Subject: A start job for unit apparmor.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit apparmor.service has finished successfully.
+░░ 
+░░ The job identifier is 68.

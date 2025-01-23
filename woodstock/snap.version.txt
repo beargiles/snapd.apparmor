@@ -1,0 +1,6 @@
+
+snap    2.67
+snapd   2.67
+series  16
+ubuntu  24.04
+kernel  6.8.0-48-generic

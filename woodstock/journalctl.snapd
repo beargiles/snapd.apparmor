@@ -1,0 +1,74 @@
+Jan 22 17:15:34 woodstock.coyotesong.net snapd[1515]: overlord.go:271: Acquiring state lock file
+Jan 22 17:15:34 woodstock.coyotesong.net snapd[1515]: overlord.go:276: Acquired state lock file
+Jan 22 17:15:34 woodstock.coyotesong.net snapd[1515]: daemon.go:247: started snapd/2.63.1+24.04 (series 16; classic) ubuntu/24.04 (amd64) linux/6.8.0-48-generic.
+Jan 22 17:15:34 woodstock.coyotesong.net snapd[1515]: daemon.go:340: adjusting startup timeout by 2m30s (pessimistic estimate of 30s plus 5s per snap)
+Jan 22 17:15:34 woodstock.coyotesong.net snapd[1515]: backends.go:58: AppArmor status: apparmor is enabled and all features are available
+Jan 22 17:15:34 woodstock.coyotesong.net systemd[1]: Starting snapd.service - Snap Daemon...
+░░ Subject: A start job for unit snapd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit snapd.service has begun execution.
+░░ 
+░░ The job identifier is 155.
+Jan 22 17:15:35 woodstock.coyotesong.net systemd[1]: Started snapd.service - Snap Daemon.
+░░ Subject: A start job for unit snapd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit snapd.service has finished successfully.
+░░ 
+░░ The job identifier is 155.
+Jan 22 17:15:42 woodstock.coyotesong.net snapd[1515]: taskrunner.go:299: Change 55 task (Mount snap "brave" (456)) failed: cannot process snap or snapdir: open /var/lib/snapd/snaps/brave_456.snap: no such file or directory
+Jan 22 17:20:45 woodstock.coyotesong.net snapd[1515]: storehelpers.go:923: cannot refresh:
+Jan 22 17:20:45 woodstock.coyotesong.net snapd[1515]: snap has no updates available: "bare", "core18", "core20", "cups", "firefox", "gnome-3-38-2004", "gnome-42-2204", "gtk-common-themes", "jbang", "mesa-2404", "snap-store", "snapd-desktop-integration", "thunderbird", "zoom-client"
+Jan 22 17:20:45 woodstock.coyotesong.net snapd[1515]: snap not found: "atom"
+Jan 22 17:20:55 woodstock.coyotesong.net snapd[1515]: daemon.go:519: gracefully waiting for running hooks
+Jan 22 17:20:55 woodstock.coyotesong.net snapd[1515]: daemon.go:521: done waiting for running hooks
+Jan 22 17:21:23 woodstock.coyotesong.net snapd[1515]: overlord.go:515: Released state lock file
+Jan 22 17:21:23 woodstock.coyotesong.net snapd[1515]: daemon.go:568: WARNING: cannot gracefully shut down in-flight snapd API activity within: 25s
+Jan 22 17:21:23 woodstock.coyotesong.net systemd[1]: snapd.service: Deactivated successfully.
+░░ Subject: Unit succeeded
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ The unit snapd.service has successfully entered the 'dead' state.
+Jan 22 17:21:23 woodstock.coyotesong.net systemd[1]: snapd.service: Consumed 20.112s CPU time, 110.1M memory peak, 0B memory swap peak.
+░░ Subject: Resources consumed by unit runtime
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ The unit snapd.service completed and consumed the indicated resources.
+Jan 22 17:21:23 woodstock.coyotesong.net systemd[1]: snapd.service: Scheduled restart job, restart counter is at 1.
+░░ Subject: Automatic restarting of a unit has been scheduled
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ Automatic restarting of the unit snapd.service has been scheduled, as the result for
+░░ the configured Restart= setting for the unit.
+Jan 22 17:21:23 woodstock.coyotesong.net systemd[1]: Starting snapd.service - Snap Daemon...
+░░ Subject: A start job for unit snapd.service has begun execution
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit snapd.service has begun execution.
+░░ 
+░░ The job identifier is 3987.
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: overlord.go:274: Acquiring state lock file
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: overlord.go:279: Acquired state lock file
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: patch.go:64: Patching system state level 6 to sublevel 1...
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: patch.go:64: Patching system state level 6 to sublevel 2...
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: patch.go:64: Patching system state level 6 to sublevel 3...
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: daemon.go:250: started snapd/2.67 (series 16; classic) ubuntu/24.04 (amd64) linux/6.8.0-48-generic.
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: daemon.go:353: adjusting startup timeout by 2m30s (pessimistic estimate of 30s plus 5s per snap)
+Jan 22 17:21:25 woodstock.coyotesong.net snapd[8369]: backends.go:58: AppArmor status: apparmor is enabled and all features are available (using snapd provided apparmor_parser)
+Jan 22 17:21:26 woodstock.coyotesong.net snapd[8369]: helpers.go:159: error trying to compare the snap system key: system-key versions not comparable
+Jan 22 17:21:39 woodstock.coyotesong.net systemd[1]: Started snapd.service - Snap Daemon.
+░░ Subject: A start job for unit snapd.service has finished successfully
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░ 
+░░ A start job for unit snapd.service has finished successfully.
+░░ 
+░░ The job identifier is 3987.
+Jan 22 17:23:23 woodstock.coyotesong.net snapd[8369]: storehelpers.go:954: cannot refresh: snap has no updates available: "brave", "core22", "core24", "discord", "gnome-46-2404", "intellij-idea-ultimate", "obsidian", "snapd", "spotify"
